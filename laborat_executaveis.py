@@ -40,19 +40,7 @@ while True:
             pyautogui.press('enter')
             pyautogui.alert('Lixeira esvaziada com sucesso!')
 
-            """pyautogui.write('https://www.b3.com.br/pt_br/para-voce')
-            pyautogui.press('Enter')
-            time.sleep(5)
-            pyautogui.click(x=583, y=260)
-            pyautogui.doubleClick(x=965, y=129)
-            time.sleep(1)
-            pyautogui.write('Cruzeiro esporte clube oficial')
-            pyautogui.press('Enter')
-            time.sleep(5)
-            pyautogui.doubleClick(x=651, y=511)
-            time.sleep(2)
-            pyautogui.doubleClick(x=605, y=554)""""""
-"""
+            
             break
 
 window.close()

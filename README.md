@@ -1,87 +1,84 @@
-Gerenciador de Login e Automação
-Este projeto é uma aplicação simples desenvolvida em Python que utiliza as bibliotecas PySimpleGUI e PyAutoGUI para criar uma interface gráfica de login e realizar ações automatizadas no sistema operacional, como abrir a lixeira e esvaziá-la.
+Gerenciador de Login com Automação 🖥️✨
 
-Descrição
-O programa apresenta uma interface gráfica onde o usuário pode inserir um nome de usuário e senha. Após o login bem-sucedido, o programa realiza as seguintes ações automaticamente:
 
-Abre a lixeira do sistema.
-Seleciona todos os itens na lixeira.
-Exibe alertas para o usuário antes de esvaziar a lixeira.
-Esvazia a lixeira e exibe uma mensagem de sucesso.
+Bem-vindo ao Gerenciador de Login com Automação! 😎 Este repositório contém um script Python simples que utiliza as bibliotecas PySimpleGUI e pyautogui para criar uma interface gráfica que simula um processo de login. Após a autenticação bem-sucedida, o script realiza ações automatizadas no sistema, como esvaziar a lixeira do Windows 🗑️.
 
-Pré-requisitos
-Antes de executar o programa, certifique-se de que os seguintes itens estão instalados no seu ambiente:
 
-Python 3.6 ou superior
-Bibliotecas Python:
-PySimpleGUI: Para criar a interface gráfica.
-PyAutoGUI: Para automação de ações no sistema operacional.
-Instale as bibliotecas necessárias:
+Funcionalidades 🎯
+Interface gráfica de login com campos para nome de usuário e senha. 👨‍💻
 
+Validação de login com credenciais fixas:
+
+Usuário: admin
+
+Senha: 0123
+
+Após o login bem-sucedido, o script realiza as seguintes automações:
+
+Exibe alertas de confirmação 💬.
+
+Busca e clica na "Lixeira" do Windows 🧹.
+
+Seleciona todos os itens na lixeira e os deleta ⚡.
+
+Exibe alertas de sucesso após a exclusão da lixeira 🎉.
+
+Tecnologias Utilizadas 🚀
+PySimpleGUI: Biblioteca para criar interfaces gráficas simples e intuitivas. 🖥️
+
+pyautogui: Biblioteca para automação de interações com a interface gráfica do sistema (como cliques, digitação e teclas de atalho). ⌨️
+
+time: Biblioteca para gerenciar intervalos de tempo entre ações no script ⏳.
+
+Como Usar 📋
+1. Instalação 🛠️
+Primeiro, certifique-se de ter o Python 3.x instalado em sua máquina. Para instalar as dependências necessárias, execute o seguinte comando no terminal:
+
+bash
+Copiar
 pip install PySimpleGUI pyautogui
+2. Executando o Script 🎬
+Após instalar as dependências, basta executar o script Python no seu ambiente local:
 
-Como usar
-Execute o programa:
-
-Salve o código em um arquivo chamado gerenciador.py (ou outro nome de sua escolha).
-Execute o programa no terminal:
-
-python gerenciador.py
+bash
+Copiar
+python gerenciador_login.py
+3. Passos para Uso 🏃‍♂️
+Abra o aplicativo: Uma interface gráfica aparecerá pedindo para você fazer o login.
 
 Insira as credenciais:
 
-Nome de usuário: admin
+Usuário: admin
+
 Senha: 0123
-Clique em "Entrar":
 
-Após o login bem-sucedido, o programa iniciará as ações automatizadas.
-Ações automatizadas:
+Clique em "Entrar": Se as credenciais estiverem corretas, o script realizará as automações para você. 🎉
 
-O programa abrirá a lixeira, selecionará todos os itens, exibirá alertas e esvaziará a lixeira.
+4. Explicação das Ações de Automação 🧠
+Após o login bem-sucedido, o script vai:
 
+Exibir um alerta com o texto: "Clique em OK para começarmos!" 📲
 
-Fluxo do Programa
-Interface Gráfica:
+Clicar na lixeira do sistema (localizada nas coordenadas (641, 442) da tela). 🖱️
 
-Criada com PySimpleGUI, a interface contém:
-Campos para nome e senha.
-Botões "Entrar" e "Cancelar".
-Uma opção para salvar o login (não funcional no código atual).
+Escrever "lixeira" na busca do sistema e pressionar Enter ⌨️.
 
-Validação de Login:
+Selecionar todos os itens da lixeira usando o atalho de teclado Ctrl + A. 🗂️
 
-O programa verifica se o nome de usuário e a senha inseridos correspondem aos valores pré-definidos:
-Nome: admin
-Senha: 0123
-Automação com PyAutoGUI:
+Exibir um alerta dizendo que a lixeira será esvaziada em 30 segundos. ⏳
 
-Após o login, o programa utiliza PyAutoGUI para:
-Abrir o menu iniciar.
-Pesquisar e abrir a lixeira.
-Selecionar todos os itens na lixeira.
-Exibir alertas antes de esvaziar a lixeira.
-Esvaziar a lixeira.
+Deletar os itens da lixeira e pressionar Enter para confirmar a exclusão. 🔥
 
+Exibir um alerta final indicando que a lixeira foi esvaziada com sucesso! 🎉
 
-Personalização
-Credenciais:
-
-Você pode alterar o nome de usuário e senha no trecho:
-
-if valores['Nome'] == 'admin' and valores['Senha'] == '0123':
-
-Coordenadas do mouse:
-
-As coordenadas usadas para cliques na lixeira (x=641, y=442, etc.) podem variar dependendo da resolução e configuração do monitor. Ajuste as coordenadas conforme necessário.
-
-Atenção
-Automação:
-Certifique-se de que o sistema operacional está configurado corretamente para que as ações automatizadas funcionem.
-Teste o programa em um ambiente seguro antes de usá-lo em produção.
-
-Licença
-Este projeto é de uso livre e pode ser modificado conforme necessário. Use-o com responsabilidade.
+5. Segurança 🔒
+Este script usa credenciais fixas e simples ("admin" e "0123") para fins de demonstração. Não é recomendado utilizar este código em ambientes de produção ou com dados sensíveis. Use-o apenas para fins de aprendizado e automação de tarefas simples. 😉
 
 
 
+Exemplo de Execução 🎥
+Inicie o aplicativo.
 
+Preencha os campos de login com o nome de usuário admin e a senha 0123.
+
+Clique em "Entrar": Se tudo estiver certo, o script vai automaticamente esvaziar a lixeira para você!

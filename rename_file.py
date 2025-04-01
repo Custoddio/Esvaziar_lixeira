@@ -1,17 +1,16 @@
-import os 
+import os
 import pyautogui
 import time
 
-folder = r"C:\\Users\\andre\\Downloads"
+folder = r"C:\Users\YourUsername\Documents\MyFolder" 
 
+ # Change this to your folder path
 for file_name in os.listdir(folder):
-    if file_name.endswith(".xlsx"):
-        old_name = folder + file_name
-        new_name = folder + file_name[0:30]
-        os.rename(old_name, new_name)
+    old_name = os.path.join(folder, file_name)
+    name, estension = os.path.splitext(file_name)
+    new_name = os.path.join(folder, name[0:50] + estension)
+    os.rename(old_name, new_name)
 
-pyautogui.alert("Arquivos renomeados com sucesso!")
-time.sleep(5)
-print(os.listdir(folder))
-       
-       
+    pyautogui.alert("Diminuindo o nome do arquivo para 50 caracteres")
+    pyautogui.alert("Arquivo renomeado com sucesso!")
+    
